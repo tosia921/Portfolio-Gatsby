@@ -1,0 +1,28 @@
+.button {
+  text-decoration: none;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-radius: 8px;
+
+  &--primary {
+    color: #000000;
+    background: rgb(214, 136, 20);
+    background: linear-gradient(
+      45deg,
+      rgba(236, 168, 68, 1) 0%,
+      rgba(236, 168, 68, 1) 40%,
+      rgba(214, 136, 20, 1) 100%
+    );
+  }
+  &--secondary {
+    color: #ffffff;
+    background: rgb(214, 136, 20);
+    background: linear-gradient(
+      45deg,
+      rgba(58, 94, 163, 1) 0%,
+      rgba(58, 94, 163, 1) 40%,
+      rgba(32, 68, 138, 1) 100%
+    );
+  }
+}

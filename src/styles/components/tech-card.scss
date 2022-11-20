@@ -1,0 +1,45 @@
+.tech-card {
+  // height: 100px;
+  // width: 100px;
+  aspect-ratio: 1/1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(227, 227, 227);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(227, 227, 227, 0.3) 50%,
+    rgb(227, 227, 227, 0.8) 100%
+  );
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+
+  .image {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .name {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 500;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+
+    @include from("sm") {
+      font-size: 14px;
+      bottom: 4px;
+    }
+    @include from("md") {
+      font-size: 15px;
+      bottom: 4px;
+    }
+  }
+}

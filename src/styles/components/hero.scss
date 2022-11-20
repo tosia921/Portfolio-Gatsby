@@ -1,0 +1,181 @@
+.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+
+    @include from("md") {
+      flex-direction: row-reverse;
+      height: calc(100vh - 70px);
+    }
+
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding-top: 20px;
+      @include from("md") {
+        padding-top: 10vh;
+        width: 50%;
+      }
+      @include from("lg") {
+        padding-top: 10vh;
+        width: 50%;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        color: var(--dark-orange);
+        letter-spacing: 1px;
+        line-height: 45px;
+        margin: 5px 0 20px 0;
+
+        @include from("lg") {
+          font-size: 5rem;
+          line-height: 5.5rem;
+          // white-space: nowrap;
+        }
+        @include from("xxl") {
+          font-size: 7rem;
+          line-height: 7.5rem;
+        }
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+
+        @include from("lg") {
+          font-size: 3rem;
+        }
+        @include from("xxl") {
+          font-size: 3.5rem;
+        }
+      }
+
+      p:first-child {
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.8rem;
+
+        @include from("lg") {
+          font-size: 2rem;
+        }
+        @include from("xxl") {
+          font-size: 2.5rem;
+        }
+
+        span {
+          color: var(--dark-orange);
+        }
+      }
+      .description {
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        @include from("lg") {
+          font-size: 1.8rem;
+          margin-bottom: 40px;
+        }
+        @include from("xxl") {
+          font-size: 1.8rem;
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        .button {
+          @include from("xxl") {
+            font-size: 1.8rem;
+            padding: 18px 36px;
+          }
+        }
+
+        .button:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+    .hero__svg {
+      width: 100%;
+      position: relative;
+      margin-top: 20vw;
+      margin-bottom: 20vw;
+      display: flex;
+      justify-content: center;
+
+      @media (min-width: 500px) {
+        width: 80%;
+      }
+      @media (min-width: 600px) {
+        width: 70%;
+        margin-left: 7vw;
+      }
+      @media (min-width: 600px) {
+        width: 60%;
+        margin-left: 10vw;
+      }
+      @include from("md") {
+        margin-left: 0;
+        margin-top: 0;
+        padding-top: 10vh;
+        justify-content: end;
+        align-items: start;
+        padding-bottom: 20%;
+        height: 100%;
+        width: 100%;
+      }
+      .svg {
+        height: auto;
+        width: 80%;
+        margin: 0 auto;
+        @media (min-width: 500px) {
+          width: 70%;
+        }
+        @include from("md") {
+          width: 60%;
+          margin: unset;
+        }
+      }
+
+      .blob {
+        width: 120%;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+
+        @include from("md") {
+          top: 20vh;
+          left: 90%;
+          width: 150%;
+        }
+        @include from("xl") {
+          top: 20%;
+          left: 90%;
+          width: 150%;
+        }
+        @include from("xxl") {
+          top: 0;
+          left: 115%;
+          width: 200%;
+        }
+        // @include from("lg") {
+        //   top: 40%;
+        //   left: 100%;
+        //   width: 150%;
+        // }
+
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
